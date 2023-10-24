@@ -2,10 +2,23 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:safepackage/Views/User_Notification/user_notification.dart';
 import '../../../Utils/app_colors.dart';
 import '../../../Widgets/custom_text.dart';
 
 class NotificationSection extends StatelessWidget {
+  List<String> packageList = [
+    "Package1 has arrived",
+    "Package2 has arrived",
+    "Package3 has arrived",
+    "Package4 has arrived",
+    "Package5 has arrived",
+    "Package6 has arrived",
+  ];
+
+
+
   String text = '23 mins agooo';
   TextStyle textStyle = TextStyle(
     fontWeight: FontWeight.w400,
@@ -38,7 +51,7 @@ class NotificationSection extends StatelessWidget {
             Expanded(
               child: ListView.builder(
                 physics: const BouncingScrollPhysics(),
-                itemCount: 9,
+                itemCount: packageList.length,
                 itemBuilder: (context, index) {
                   return Column(
                     children: [
@@ -55,11 +68,23 @@ class NotificationSection extends StatelessWidget {
                               SizedBox(
                                 width: 5.w,
                               ),
-                              CustomText(
-                                title: 'A Package has Arrived',
-                                fontWeight: FontWeight.w600,
-                                fontSize: 11.sp,
-                                color: AppColors.black,
+                              InkWell(
+                                autofocus: false,
+                                // focusColor: Colors.amber,
+                                highlightColor: Colors.amber,
+                                
+                                
+                                onTap: (){
+                                  // changeColor();
+
+                              Get.to(() => UserNotification());
+                                },
+                                child: CustomText(
+                                  title: packageList[index],
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 11.sp,
+                                  color: AppColors.black,
+                                ),
                               ),
                             ],
                           ),

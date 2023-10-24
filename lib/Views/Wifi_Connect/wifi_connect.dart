@@ -24,132 +24,134 @@ class _WifiConnectState extends State<WifiConnect> {
     return SafeArea(
       child: Scaffold(
         drawer: MyDrawer(),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomAppBar(
-              image: AppImages.profile,
-              title: "Hammad",
-            ),
-
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15.w),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(
-                    height: 200.h,
-                    child: Card(
-                      color: Colors.blueGrey.shade100,
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 10.w, vertical: 10.h),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            CustomText(
-                              title: 'Available Networks',
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.w700,
-                              color: AppColors.navyblue,
-                            ),
-                            SizedBox(height: 13.h),
-                            Expanded(
-                              child: ListView.builder(
-                                shrinkWrap: true,
-                                itemCount: 3,
-                                itemBuilder: (context, index) {
-                                  return GestureDetector(
-                                    onTap: () {},
-                                    child: Column(
-                                      children: [
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Row(
-                                              children: [
-                                                Image.asset(
-                                                  AppImages.wifiImg,
-                                                  height: 17.h,
-                                                  width: 17.w,
-                                                ),
-                                                SizedBox(
-                                                  width: 8.w,
-                                                ),
-                                                CustomText(
-                                                  title: "Micheal’s wifi",
-                                                  fontSize: 12.sp,
-                                                  fontWeight: FontWeight.w600,
-                                                  color: AppColors.black,
-                                                ),
-                                              ],
-                                            ),
-                                            CustomText(
-                                              title: 'Connected',
-                                              color: AppColors.navyblue,
-                                              fontWeight: FontWeight.w700,
-                                              fontSize: 10.sp,
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(height: 5.h),
-                                        Divider(thickness: 1.w),
-                                      ],
-                                    ),
-                                  );
-                                },
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 15.h),
-                  GestureDetector(
-                    onTap: () {
-                      buildShowDialog(context);
-                    },
-                    child: CustomText(
-                      title: 'Add manually',
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w700,
-                      color: AppColors.navyblue,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 290.h,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Get.to(() => const HomeScreen());
-                    },
-                    child: Container(
-                      // height: 35.h,
-                      padding: EdgeInsets.symmetric(vertical: 15.h),
-                      width: 393.w,
-                      decoration: BoxDecoration(
-                          color: AppColors.navyblue,
-                          borderRadius: BorderRadius.circular(10.r)),
-                      child: Center(
-                        child: CustomText(
-                          title: "Connect Another Wifi",
-                          fontSize: 13.sp,
-                          fontWeight: FontWeight.w400,
-                          color: AppColors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomAppBar(
+                image: AppImages.profile,
+                title: "Hammad",
               ),
-            ),
-
-            // const AvailableNetworks(),
-          ],
+        
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15.w),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                      height: 200.h,
+                      child: Card(
+                        color: Colors.blueGrey.shade100,
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 10.w, vertical: 10.h),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              CustomText(
+                                title: 'Available Networks',
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.w700,
+                                color: AppColors.navyblue,
+                              ),
+                              SizedBox(height: 13.h),
+                              Expanded(
+                                child: ListView.builder(
+                                  shrinkWrap: true,
+                                  itemCount: 3,
+                                  itemBuilder: (context, index) {
+                                    return GestureDetector(
+                                      onTap: () {},
+                                      child: Column(
+                                        children: [
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Image.asset(
+                                                    AppImages.wifiImg,
+                                                    height: 17.h,
+                                                    width: 17.w,
+                                                  ),
+                                                  SizedBox(
+                                                    width: 8.w,
+                                                  ),
+                                                  CustomText(
+                                                    title: "Micheal’s wifi",
+                                                    fontSize: 12.sp,
+                                                    fontWeight: FontWeight.w600,
+                                                    color: AppColors.black,
+                                                  ),
+                                                ],
+                                              ),
+                                              CustomText(
+                                                title: 'Connected',
+                                                color: AppColors.navyblue,
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 10.sp,
+                                              ),
+                                            ],
+                                          ),
+                                          SizedBox(height: 5.h),
+                                          Divider(thickness: 1.w),
+                                        ],
+                                      ),
+                                    );
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 15.h),
+                    GestureDetector(
+                      onTap: () {
+                        buildShowDialog(context);
+                      },
+                      child: CustomText(
+                        title: 'Add manually',
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.navyblue,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 290.h,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(() => const HomeScreen());
+                      },
+                      child: Container(
+                        // height: 35.h,
+                        padding: EdgeInsets.symmetric(vertical: 15.h),
+                        width: 393.w,
+                        decoration: BoxDecoration(
+                            color: AppColors.navyblue,
+                            borderRadius: BorderRadius.circular(10.r)),
+                        child: Center(
+                          child: CustomText(
+                            title: "Connect Another Wifi",
+                            fontSize: 13.sp,
+                            fontWeight: FontWeight.w400,
+                            color: AppColors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+        
+              // const AvailableNetworks(),
+            ],
+          ),
         ),
       ),
     );

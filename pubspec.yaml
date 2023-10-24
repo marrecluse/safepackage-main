@@ -42,6 +42,7 @@ dependencies:
   firebase_auth: ^4.10.1
   firebase_messaging: ^14.6.9
   firebase_storage: ^11.2.8
+  velocity_x: ^4.1.1
 
 dev_dependencies:
   flutter_test:

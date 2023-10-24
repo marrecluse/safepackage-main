@@ -10,7 +10,15 @@ import '../Safe_Circle_Notification/safe_circle_notification.dart';
 import 'components/user_notification_data.dart';
 
 class UserNotification extends StatelessWidget {
-  const UserNotification({super.key});
+ 
+   UserNotification({
+        super.key,
+
+    
+    
+    
+    });
+
 
   @override
   Widget build(BuildContext context) {
@@ -51,6 +59,7 @@ class UserNotification extends StatelessWidget {
                     ),
                   ),
                 ),
+              
               ),
               SizedBox(height: 10.h),
             ],

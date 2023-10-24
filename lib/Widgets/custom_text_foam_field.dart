@@ -34,9 +34,11 @@ class CustomTextFoamField extends StatelessWidget {
       ),
       child: TextFormField(
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.only(left: 12.w, bottom: 3.h, right: 10.w),
+          contentPadding: EdgeInsets.only(left: 12.w, right: 10.w,bottom: 10.h),
           hintText: hintText,
-          hintStyle: TextStyle(color: AppColors.grey, fontSize: 13.sp),
+          hintStyle: TextStyle(
+
+            color: AppColors.grey, fontSize: 13.sp),
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,
           border: InputBorder.none,

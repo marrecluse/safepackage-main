@@ -7,7 +7,7 @@ import '../../Widgets/custom_appbar.dart';
 import '../../Widgets/custom_text.dart';
 import '../../Widgets/drawer.dart';
 import '../DeviceDetails/device_detail.dart';
-import '../User_Notification/user_notification.dart';
+// import '../User_Notification/user_notification.dart';
 import 'components/add_package_gaurd.dart';
 import 'components/notification_section.dart';
 
@@ -30,11 +30,12 @@ class HomeScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Column(
                 children: [
-                  GestureDetector(
-                      onTap: () {
-                        Get.to(() => const UserNotification());
-                      },
-                      child: NotificationSection()),
+
+                
+                  NotificationSection(),
+                  
+                  
+                  
                   SizedBox(height: 12.h),
                   GestureDetector(
                     onTap: () {

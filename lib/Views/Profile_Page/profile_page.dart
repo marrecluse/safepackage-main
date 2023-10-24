@@ -19,18 +19,11 @@ class ProfilePage extends StatefulWidget {
   State<ProfilePage> createState() => _ProfilePageState();
 }
 
-bool onoff = true;
+bool onoff1 = true;
+bool onoff2 = true;
+bool onoff3 = true;
 
 class _ProfilePageState extends State<ProfilePage> {
-
-Future _pickImageFromGallery() async {
-  final returnedImage = await ImagePicker().pickImage(source: ImageSource.gallery);
-
-setState(() {
-  imageFile =File(returnedImage!.path);
-});
-
-}
 
   File? imageFile;
 
@@ -267,8 +260,8 @@ setState(() {
                         CustomSizeBox(width: 40.w),
                         GestureDetector(
                           onTap: () {
-                            _pickImageFromGallery;
-                            // AppConstants.showCustomSnackBar("Image uploaded");
+                            
+                            AppConstants.showCustomSnackBar("Image uploaded");
                           },
                           child: Container(
                             height: 35.h,
@@ -301,10 +294,10 @@ setState(() {
                         const Spacer(),
                         Switch(
                           activeColor: AppColors.green,
-                          value: onoff,
+                          value: onoff1,
                           onChanged: (value) {
                             setState(() {
-                              onoff = false;
+                              onoff1 = !onoff1;
                             });
                           },
                         )
@@ -322,9 +315,12 @@ setState(() {
                         const Spacer(),
                         Switch(
                           activeColor: AppColors.green,
-                          value: onoff,
+                          value: onoff2,
                           onChanged: (value) {
-                            value = onoff;
+                            setState(() {
+                        onoff2 = !onoff2;
+
+                            });
                           },
                         )
                       ],
@@ -341,10 +337,10 @@ setState(() {
                         const Spacer(),
                         Switch(
                           activeColor: AppColors.green,
-                          value: true,
+                          value: onoff3,
                           onChanged: (value) {
                             setState(() {
-                              value = !false;
+                              onoff3 = !onoff3;
                             });
                           },
                         )
