@@ -37,7 +37,7 @@ dependencies:
   flutter_screenutil: ^5.9.0
   get:
   flutter_switch:
-  image_picker: ^0.8.7+4
+  image_picker: ^1.0.4
   firebase_core: ^2.17.0
   firebase_auth: ^4.10.1
   firebase_messaging: ^14.6.9

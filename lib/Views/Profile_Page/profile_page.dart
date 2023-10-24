@@ -22,7 +22,23 @@ class ProfilePage extends StatefulWidget {
 bool onoff = true;
 
 class _ProfilePageState extends State<ProfilePage> {
+
+Future _pickImageFromGallery() async {
+  final returnedImage = await ImagePicker().pickImage(source: ImageSource.gallery);
+
+setState(() {
+  imageFile =File(returnedImage!.path);
+});
+
+}
+
   File? imageFile;
+
+
+
+
+
+
 
   getFromGallery() async {
     final ImagePicker _picker = ImagePicker();
@@ -251,7 +267,8 @@ class _ProfilePageState extends State<ProfilePage> {
                         CustomSizeBox(width: 40.w),
                         GestureDetector(
                           onTap: () {
-                            AppConstants.showCustomSnackBar("Image uploaded");
+                            _pickImageFromGallery;
+                            // AppConstants.showCustomSnackBar("Image uploaded");
                           },
                           child: Container(
                             height: 35.h,
