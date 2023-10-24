@@ -19,7 +19,8 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return 
+    Stack(
       children: [
         SizedBox(
           width: 393.w,
@@ -95,7 +96,7 @@ class CustomAppBar extends StatelessWidget {
                     ),
                     IconButton(
                         onPressed: () {
-                          // Scaffold.of(context).openDrawer();
+                          Scaffold.of(context).openDrawer();
                           
                         },
                         icon: Icon(

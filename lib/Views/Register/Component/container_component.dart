@@ -25,7 +25,7 @@ class ContainerComponent extends StatelessWidget {
             ),
             child: Padding(
               padding: EdgeInsets.only(
-                left: 20.w,
+                left: 10.w,
               ),
               child: Row(
                 children: [
@@ -59,7 +59,7 @@ class ContainerComponent extends StatelessWidget {
             ),
             child: Padding(
               padding: EdgeInsets.only(
-                left: 20.w,
+                left: 10.w,
               ),
               child: Row(
                 children: [
@@ -95,24 +95,26 @@ class ContainerComponent extends StatelessWidget {
                 border: Border.all(color: AppColors.backgoundColor),
                 color: AppColors.backgoundColor,
               ),
-              child: Padding(
-                padding: EdgeInsets.only(
-                  left: 20.w,
-                ),
-                child: Row(
-                  children: [
-                    Image(
-                        image: AssetImage(AppImages.facbook),
-                        height: 18.h,
-                        width: 18.w),
-                    CustomSizeBox(width: 20.w),
-                    CustomText(
-                      title: "Sign up with Facebook",
-                      fontSize: 13.sp,
-                      fontWeight: FontWeight.w500,
-                      color: AppColors.textColor,
-                    ),
-                  ],
+              child: Center(
+                child: Padding(
+                  padding: EdgeInsets.only(
+                    left: 10.w,
+                  ),
+                  child: Row(
+                    children: [
+                      Image(
+                          image: AssetImage(AppImages.facbook),
+                          height: 18.h,
+                          width: 18.w),
+                      CustomSizeBox(width: 20.w),
+                      CustomText(
+                        title: "Sign up with Facebook",
+                        fontSize: 13.sp,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.textColor,
+                      ),
+                    ],
+                  ),
                 ),
               )),
         ),

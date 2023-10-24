@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:safepackage/Utils/app_images.dart';
 import 'package:safepackage/Widgets/custom_appbar.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 import '../../Utils/app_colors.dart';
 import '../../Widgets/custom_sized_box.dart';
@@ -180,12 +181,19 @@ class _AddPackageGuardState extends State<AddPackageGuard> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          CustomText(
-                            title:
-                                'Receive a READY notification. Check your list of\ndevices. For troubleshooting, go to:',
-                            fontSize: 12.sp,
-                            color: AppColors.black,
-                            fontWeight: FontWeight.w400,
+                          SizedBox(
+                            width: 260.w,
+                            height: 50.h,
+                            child: 
+                            CustomText(
+                              
+                              title:
+                                  'Receive a READY notification. Check your list ofdevices. For troubleshooting, go to:',
+                                  
+                              fontSize: 12.sp,
+                              color: AppColors.black,
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
                           SizedBox(height: 4.h),
                           CustomText(

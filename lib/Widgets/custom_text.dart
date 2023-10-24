@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class CustomText extends StatelessWidget {
@@ -23,9 +24,8 @@ class CustomText extends StatelessWidget {
     return Text(
       title,
       textAlign: textAlign,
-      overflow: TextOverflow.ellipsis,
+      // overflow: TextOverflow.ellipsis,
       style: TextStyle(
-          
           fontSize: fontSize,
           fontWeight: fontWeight,
           color: color,

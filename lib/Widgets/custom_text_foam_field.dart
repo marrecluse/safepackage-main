@@ -34,7 +34,7 @@ class CustomTextFoamField extends StatelessWidget {
       ),
       child: TextFormField(
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.only(left: 12.w, right: 10.w,bottom: 10.h),
+          contentPadding: EdgeInsets.only(left: 12.w, right: 10.w,top: 6),
           hintText: hintText,
           hintStyle: TextStyle(
 

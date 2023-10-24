@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:safepackage/Widgets/drawer.dart';
 import '../../Utils/app_colors.dart';
 import '../../Utils/app_constants.dart';
 import '../../Utils/app_images.dart';
@@ -59,8 +60,11 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+          drawer: MyDrawer(),
       body: Column(children: [
         CustomAppBar(
+
+          
           image: AppImages.profile,
           title: "Hammad",
         ),

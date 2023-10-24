@@ -7,6 +7,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:safepackage/Utils/app_colors.dart';
 import 'package:safepackage/Utils/app_images.dart';
 import 'package:safepackage/Widgets/custom_appbar.dart';
+import 'package:velocity_x/velocity_x.dart';
 import '../../Utils/app_constants.dart';
 import '../../Widgets/custom_sized_box.dart';
 import '../../Widgets/custom_text.dart';
@@ -109,6 +110,7 @@ class _AddSafePersonState extends State<AddSafePerson> {
                             CustomSizeBox(
                               width: 15.w,
                             ),
+                            2.widthBox,
                             Expanded(child: CustomTextFoamField()),
                           ],
                         ),
