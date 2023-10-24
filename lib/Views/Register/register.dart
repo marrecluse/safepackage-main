@@ -133,9 +133,9 @@ class _SignUpState extends State<SignUp> {
                           CustomSizeBox(width: 15.w),
                           Expanded(
                             child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                LabelText(title: "State"),
+                               LabelText(title: "State"),
                                 CustomSizeBox(height: 5.h),
                                 CustomTextFoamField(
                                   hintText: "State",

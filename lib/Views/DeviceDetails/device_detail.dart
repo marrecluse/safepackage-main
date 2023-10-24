@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:safepackage/Utils/app_images.dart';
 import 'package:safepackage/Widgets/custom_appbar.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 import '../../Utils/app_colors.dart';
 import '../../Utils/app_constants.dart';
@@ -127,23 +128,21 @@ class _DeviceDetailsState extends State<DeviceDetails> {
                                   borderRadius: BorderRadius.circular(9.r),
                                 ),
                               ),
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 10.w),
-                                child: Row(
-                                  children: [
-                                    Image.asset(
-                                      height: 25.h,
-                                      AppImages.speaker,
-                                    ),
-                                    SizedBox(width: 10.w),
-                                    CustomText(
-                                      title: "Adjust Volumn",
-                                      fontSize: 14.sp,
-                                      fontWeight: FontWeight.w400,
-                                      color: AppColors.white,
-                                    ),
-                                  ],
-                                ),
+                              child: Row(
+                                children: [
+                                  10.widthBox,
+                                  Image.asset(
+                                    height: 25.h,
+                                    AppImages.speaker,
+                                  ),
+                                  SizedBox(width: 10.w),
+                                  CustomText(
+                                    title: "Adjust Volume",
+                                    fontSize: 14.sp,
+                                    fontWeight: FontWeight.w400,
+                                    color: AppColors.white,
+                                  ),
+                                ],
                               ),
                             )
                           ],

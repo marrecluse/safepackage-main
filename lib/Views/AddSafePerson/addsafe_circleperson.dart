@@ -111,7 +111,42 @@ class _AddSafePersonState extends State<AddSafePerson> {
                               width: 15.w,
                             ),
                             2.widthBox,
-                            Expanded(child: CustomTextFoamField()),
+                            Expanded(child:
+                            Container(
+      width: 355.w,
+      height: 47.h,
+      decoration: ShapeDecoration(
+        color: AppColors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4).r),
+
+        shadows: [
+          BoxShadow(
+            color: const Color(0x3F000000),
+            blurRadius: 5.r,
+            offset: const Offset(0, 0),
+            spreadRadius: 0,
+          )
+        ],
+      ),
+      child: TextFormField(
+        
+        decoration: InputDecoration(
+          // contentPadding: EdgeInsets.only(left: 12.w, right: 10.w,bottom: 5.w,),
+          // contentPadding: EdgeInsets.only(left: 12),
+          contentPadding: EdgeInsets.only(bottom: 10.h,left: 10.w),
+          hintStyle: TextStyle(
+
+            color: AppColors.grey, fontSize: 16.sp),
+
+          border: InputBorder.none,
+        ),
+        style: TextStyle(
+          fontSize: 15.w,
+        ),
+      ),
+    )
+                            
+                            ),
                           ],
                         ),
                         CustomSizeBox(height: 10.w),
@@ -126,7 +161,46 @@ class _AddSafePersonState extends State<AddSafePerson> {
                             CustomSizeBox(
                               width: 15.w,
                             ),
-                            Expanded(child: CustomTextFoamField()),
+
+                             Expanded(child:
+                            Container(
+      width: 355.w,
+      height: 47.h,
+      decoration: ShapeDecoration(
+        color: AppColors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4).r),
+
+        shadows: [
+          BoxShadow(
+            color: const Color(0x3F000000),
+            blurRadius: 5.r,
+            offset: const Offset(0, 0),
+            spreadRadius: 0,
+          )
+        ],
+      ),
+      child: TextFormField(
+        
+        decoration: InputDecoration(
+          // contentPadding: EdgeInsets.only(left: 12.w, right: 10.w,bottom: 5.w,),
+          // contentPadding: EdgeInsets.only(left: 12),
+          contentPadding: EdgeInsets.only(bottom: 10.h,left: 10.w),
+          hintStyle: TextStyle(
+
+            color: AppColors.grey, fontSize: 16.sp),
+
+          border: InputBorder.none,
+        ),
+        style: TextStyle(
+          fontSize: 15.w,
+        ),
+      ),
+    )
+                            
+                            ),
+
+
+
                           ],
                         ),
                         CustomSizeBox(height: 10.w),
@@ -148,7 +222,7 @@ class _AddSafePersonState extends State<AddSafePerson> {
                                     width: 80.w,
                                     child: Image.file(
                                       File(imageFile!.path),
-                                      fit: BoxFit.fill,
+                                      fit: BoxFit.cover,
                                     ),
                                   ),
                             CustomSizeBox(width: 40.w),

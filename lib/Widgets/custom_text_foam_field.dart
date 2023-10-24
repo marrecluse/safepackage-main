@@ -15,6 +15,7 @@ class CustomTextFoamField extends StatelessWidget {
       this.validator,
       super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,6 +24,7 @@ class CustomTextFoamField extends StatelessWidget {
       decoration: ShapeDecoration(
         color: AppColors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4).r),
+
         shadows: [
           BoxShadow(
             color: const Color(0x3F000000),
@@ -33,15 +35,22 @@ class CustomTextFoamField extends StatelessWidget {
         ],
       ),
       child: TextFormField(
+        
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.only(left: 12.w, right: 10.w,top: 6),
+          // contentPadding: EdgeInsets.only(left: 12.w, right: 10.w,bottom: 5.w,),
+          // contentPadding: EdgeInsets.only(left: 12),
+          contentPadding: EdgeInsets.all(15.h),
           hintText: hintText,
           hintStyle: TextStyle(
 
-            color: AppColors.grey, fontSize: 13.sp),
+            color: AppColors.grey, fontSize: 16.sp),
+
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,
           border: InputBorder.none,
+        ),
+        style: TextStyle(
+          fontSize: 15.w,
         ),
         validator: validator,
       ),

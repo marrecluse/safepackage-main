@@ -10,12 +10,12 @@ class LabelText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 8.w),
+      padding: EdgeInsets.only(left: 10.w),
       child: Text(
         title,
         textAlign: TextAlign.left,
         style: TextStyle(
-          fontSize: 13.sp,
+          fontSize: 12.sp,
           fontFamily: 'Inter',
           fontWeight: FontWeight.w700,
           color: AppColors.text1color,

@@ -47,6 +47,7 @@ class _SignInState extends State<SignIn> {
                     CustomSizeBox(height: 21.h),
                     LabelText(title: "Email"),
                     CustomSizeBox(height: 5.h),
+                    
                     CustomTextFoamField(
                       hintText: "Email",
                       validator: (value) {
